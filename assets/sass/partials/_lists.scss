@@ -1,0 +1,5 @@
+ul, ol {
+  @include breakpoint(xs) {
+    padding: 0 15px;
+  }
+}

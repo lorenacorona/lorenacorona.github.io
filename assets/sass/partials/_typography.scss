@@ -5,7 +5,7 @@ body {
   color: $black;
   font-size: $body-size;
   line-height: $body-size + 10px;
-  @include breakpoint(sm) {
+  @include breakpoint(xs) {
     font-size: $body-responsive-size;
     line-height: $body-responsive-size + 10px;
   }
@@ -91,7 +91,7 @@ h4 {
   letter-spacing: -.014em;
   text-indent: -.32em;
   padding: 35px;
-  @include breakpoint(sm) {
+  @include breakpoint(xs) {
     font-size: $quote-responsive-size;
     padding: 35px 0;
   }
