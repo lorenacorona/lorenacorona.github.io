@@ -1,0 +1,16 @@
+.home-main {
+  padding: 180px 0;
+  margin-top: 15px;
+  margin-bottom: 35px;
+  background: linear-gradient(rgba(40, 48, 68, 0.7), rgba(40, 48, 68, 0.7)), url('/assets/images/me_1.jpg') no-repeat center center;
+  background-size: cover;
+
+  h1 {
+    margin: 0;
+    color: white;
+  }
+
+  @include breakpoint(sm) {
+    padding: 100px 0;
+  }
+}

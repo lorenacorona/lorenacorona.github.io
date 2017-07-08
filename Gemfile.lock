@@ -168,10 +168,6 @@ GEM
       mini_portile2 (~> 2.2.0)
     octokit (4.7.0)
       sawyer (~> 0.8.0, >= 0.5.3)
-    octopress-hooks (2.6.2)
-      jekyll (>= 2.0)
-    octopress-paginate (1.2.0)
-      octopress-hooks
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
     public_suffix (2.0.5)
@@ -200,7 +196,6 @@ DEPENDENCIES
   github-pages
   jekyll (= 3.4.3)
   jekyll-feed (~> 0.6)
-  octopress-paginate
   tzinfo-data
 
 RUBY VERSION
