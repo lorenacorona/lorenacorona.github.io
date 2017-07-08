@@ -23,22 +23,13 @@ h4 {
 
 a.button,
 button {
-  font-family: $font-family-heading;
+  font-family: $font-family-body;
   font-weight: 700;
 }
 
 a {
-  color: $black;
-  font-weight: bold;
   text-decoration: none;
-
-  &:active,
-  &:focus,
-  &:hover,
-  &:visited {
-    color: $black;
-    text-decoration: none;
-  }
+  font-weight: bold;
 }
 
 h1 {

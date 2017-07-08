@@ -1,4 +1,8 @@
-ul, ol {
+ol,
+ul {
+  li {
+    margin: 15px 0;
+  }
   @include breakpoint(xs) {
     padding: 0 15px;
   }

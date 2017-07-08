@@ -8,8 +8,10 @@ layout: default
     <div class="post-tag">
       Tagged with {{ page.categories | join: ', ' }}
     </div>
+    {% if !page.picture.empty? %}
     <div class="post-picture" style="background-image: url({{ page.picture }})">
     </div>
+    {% endif %}
     {{ content }}
     {% if page.comments != false and site.disqus.id %}
     <div class="post-disqus">
