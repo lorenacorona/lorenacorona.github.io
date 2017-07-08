@@ -1,0 +1,13 @@
+.button {
+  padding: 15px 20px;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: 0;
+}
+
+.primary-button {
+  @extend .button;
+  color: $dark-blue;
+  background-color: $bright-blue;
+}

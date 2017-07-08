@@ -1,0 +1,46 @@
+#map {
+  width: 100%;
+  height: 300px;
+
+  strong {
+    margin: 0;
+    padding: 15px 0;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 15px;
+  }
+}
+
+.trips {
+  padding: 15px 0;
+}
+
+.trip-row {
+  display: table;
+  width: 100%;
+}
+
+.trip {
+  display: table-cell;
+  width: 50%;
+  vertical-align: middle;
+  font-size: 1rem;
+  padding: 5px;
+  @include breakpoint(sm) {
+    width: 100%;
+    display: inline-block;
+  }
+
+  &-content {
+    background-color: $calm-blue;
+    text-align: center;
+    padding: 30% 0;
+  }
+
+  &-title {
+    color: $white;
+    margin: 0;
+  }
+}

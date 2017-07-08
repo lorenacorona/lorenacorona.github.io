@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<article class="post">
+  <div class="container">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-tag">
+      Tagged with {{ page.categories | join: ', ' }}
+    </div>
+    <div class="post-picture" style="background-image: url({{ page.picture }})">
+    </div>
+    {{ content }}
+    {% if page.comments != false and site.disqus.id %}
+    <div class="post-disqus">
+      <section id="disqus_thread"></section>
+      {% include disqus.html %}
+    </div>
+    {% endif %}
+  </div>
+</article>

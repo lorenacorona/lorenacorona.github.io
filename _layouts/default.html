@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: page.lang | default: 'en' }}">
+
+{% include head.html %}
+
+<body>
+  {% include shim.html %}
+  {% include header.html %}
+  {{ content }}
+  {% if jekyll.environment == 'production' %}
+    {% include analytics.html %}
+  {% endif %}
+  {% include footer.html %}
+</body>
+
+</html>
