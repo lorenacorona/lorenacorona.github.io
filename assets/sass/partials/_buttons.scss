@@ -15,3 +15,9 @@
   color: white;
   background-color: $bright-blue;
 }
+
+.secondary-button {
+  @extend .button;
+  color: white;
+  background-color: $calm-blue;
+}

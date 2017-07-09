@@ -1,0 +1,61 @@
+.newsletter {
+  border: 1px solid #dddddd;
+  padding: 30px 20px;
+  text-align: center;
+  margin: 60px auto 35px auto;
+}
+
+.newsletter-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.newsletter-header {
+  margin-bottom: 35px;
+  margin-top: 0;
+}
+
+.newsletter-title {
+  margin: 0;
+}
+
+.newsletter-field {
+  margin: 15px 0;
+}
+
+.newsletter-label {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.newsletter-input {
+  width: 100%;
+  max-width: 100%;
+  border: 0;
+  border: 2px solid #DDDDDD;
+  border-radius: 4px;
+  display: inline-block;
+  outline: 0;
+  height: 47px;
+  text-indent: 15px;
+  &:focus {
+    border: 2px solid $calm-blue;
+  }
+}
+
+.newsletter-button {
+  margin-top: 35px;
+  width: 100%;
+
+  .secondary-button {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.newsletter-disclaimer {
+  font-size: 14px;
+  font-style: italic;
+}
