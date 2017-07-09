@@ -1,0 +1,32 @@
+.article {
+  text-align: center;
+}
+
+.article-header {
+  margin-top: 60px;
+  margin-bottom: 35px;
+
+}
+
+.article-date {
+  margin: 0;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.article-title {
+  margin: 0;
+}
+
+.article-picture {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 150px 0;
+  margin-top: 15px;
+  margin-bottom: 35px;
+  text-align: center;
+  @include breakpoint(sm) {
+    padding: 100px 0;
+  }
+}

@@ -7,11 +7,15 @@ permalink: /blog/
 <div class="container">
   {% for post in site.posts %}
   <article class="article">
-    <header>
+    <header class="article-header">
+      <p class="article-date">
+        {{ post.date | date: '%B %d, %Y' }}
+      </p>
       <h2 class="article-title">{{ post.title }}</h2>
+
     </header>
     {% if post.picture %}
-      <div class="post-picture" style="background-image: url({{ post.picture }})"></div>
+      <div class="article-picture" style="background-image: linear-gradient(rgba(40,48,68,0.6), rgba(40,48,68,0.6)), url({{ post.picture }})"></div>
     {% endif %}
     <p class="article-excerpt">
       {{ post.excerpt }}

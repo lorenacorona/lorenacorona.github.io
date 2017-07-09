@@ -3,21 +3,19 @@ layout: default
 ---
 
 <article class="post">
+  <div class="post-main" style="background-image: linear-gradient(rgba(40,48,68,0.6), rgba(40,48,68,0.6)), url({{ page.picture }})">
+    <div class="container">
+      <h1 class="post-title">{{ page.title }}</h1>
+      <div class="post-tag">
+        Tagged with {{ page.categories | join: ', ' }}
+      </div>
+    </div>
+
+  </div>
   <div class="container">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <div class="post-tag">
-      Tagged with {{ page.categories | join: ', ' }}
-    </div>
-    {% if !page.picture.empty? %}
-    <div class="post-picture" style="background-image: url({{ page.picture }})">
-    </div>
-    {% endif %}
     {{ content }}
-    {% if page.comments != false and site.disqus.id %}
     <div class="post-disqus">
-      <section id="disqus_thread"></section>
       {% include disqus.html %}
     </div>
-    {% endif %}
   </div>
 </article>
