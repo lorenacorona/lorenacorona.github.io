@@ -1,3 +1,20 @@
+.services-main {
+  padding: 180px 0;
+  margin-top: 15px;
+  margin-bottom: 35px;
+  background: linear-gradient(rgba(40, 48, 68, 0.7), rgba(40, 48, 68, 0.7)), url('/assets/images/services.jpg') no-repeat center center;
+  background-size: cover;
+
+  h1 {
+    margin: 0;
+    color: white;
+  }
+
+  @include breakpoint(sm) {
+    padding: 100px 0;
+  }
+}
+
 .services-button {
   margin-top: 70px;
   margin-bottom: 35px;
