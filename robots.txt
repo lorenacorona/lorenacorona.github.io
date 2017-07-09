@@ -1,6 +1,8 @@
 User-agent: GoogleBot
 Disallow: /robots.txt
 
+Sitemap: {{ site.url }}/sitemap.xml
+
 # Bots perjuduciales
 User-agent: BotRightHere
 Disallow: /
