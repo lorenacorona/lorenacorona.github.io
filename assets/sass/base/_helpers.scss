@@ -3,7 +3,7 @@
     @media (max-width: 320px) { @content; }
   }
 
-  @if $class == xs {
+  @else if $class == xs {
     @media (max-width: 480px) { @content; }
   }
 

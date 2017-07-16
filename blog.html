@@ -5,9 +5,11 @@ permalink: /blog/
 ---
 
 <div class="container">
+  {% if site.posts.size  == 0 %}
   <article class="article">
     <h3>Ups! Posts coming soon...</h3>
   </article>
+  {% endif %}
   {% for post in site.posts %}
   <article class="article">
     <header class="article-header">
@@ -15,7 +17,6 @@ permalink: /blog/
         {{ post.date | date: '%B %d, %Y' }}
       </p>
       <h2 class="article-title">{{ post.title }}</h2>
-
     </header>
     {% if post.picture %}
       <div class="article-picture" style="background-image: linear-gradient(rgba(40,48,68,0.6), rgba(40,48,68,0.6)), url({{ post.picture }})"></div>
