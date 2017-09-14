@@ -1,75 +1,13 @@
-$navbar-height: 140px;
-
 .navbar {
-  margin-bottom: 0;
-  font-family: $font-family-body;
-  height: $navbar-height;
-  line-height: $navbar-height;
-  @include breakpoint(sm) {
-    height: auto;
-    line-height: 16px;
-    padding: 15px 0;
-  }
+  text-align: center;
+}
 
-  .navbar-brand {
-    img {
-      width: 120px;
-      display: block;
-    }
-  }
-
-  .navbar-wrapper {
-    display: table;
-    width: 100%;
-  }
-
-  .navbar-items {
-    list-style: none;
-    display: table-cell;
-    vertical-align: middle;
-    padding: 0;
-    margin: 0;
-    width: 50%;
-    @include breakpoint(sm) {
-      width: 100%;
-      display: block;
-      text-align: center;
-    }
-  }
-
-  .right-navbar-items {
-    @extend .navbar-items;
-    text-align: right;
-    @include breakpoint(sm) {
-      text-align: center;
-    }
-  }
-
-  .navbar-item {
-    display: inline-block;
-    vertical-align: middle;
-    padding: 0 10px;
-
-    &:first-child {
-      padding-left: 0;
-    }
-
-    &:last-child {
-      padding-right: 0;
-    }
-
-    a {
-      border: 0;
-      color: $black;
-    }
-
-    @include breakpoint(xs) {
-      &:first-child {
-        padding-left: 10px;
-      }
-      &:last-child {
-        padding-right: 10px;
-      }
-    }
-  }
+.navbar-picture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 35px auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
