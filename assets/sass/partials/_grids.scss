@@ -1,10 +1,20 @@
 .container {
   margin: 0 auto;
-  padding: 0 20px;
   max-width: 960px;
+  padding: 0 15px;
 }
 
 .container-fluid {
   @extend .container;
   max-width: 1200px;
+}
+
+.separator {
+  padding: 15px 0;
+}
+
+.separator-mobile {
+  @include breakpoint(sm) {
+    padding: 15px 0;
+  } 
 }

@@ -1,20 +1,16 @@
-title: Alberto Gallego
-email: albertogc2793@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-      Hi! I am software developer and I like building products
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://albertogallego.me" # the base hostname & protocol for your site, e.g. http://example.com
+title: Lorena Corona. Publicista de carrera y marketiniana de profesión.
+email: lorenacorona95@gmail.com
+description: Estrategia y creatividad digital. Especialista en llevar la publicidad a un nuevo escenario digitalizado para conectar mejor a las marcas con las personas.
+baseurl: ""
+url: "https://lorenacorona.com"
 twitter_username: jekyllrb
 github_username:  jekyll
-paginate: 3
-paginate_path: "/blog/page:num/"
 
 sass:
   add_charset: true
   sass_dir: assets/sass
   style: :compressed
 
-# Build settings
 markdown: kramdown
 gems:
   - jekyll-feed

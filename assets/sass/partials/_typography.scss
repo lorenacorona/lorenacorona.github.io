@@ -1,13 +1,14 @@
 body {
-  font-family: $font-family-body;
+  font-family: $font-family;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $black;
+  font-weight: bold;
+  letter-spacing: -1px;
   font-size: $body-size;
-  line-height: $body-size + 10px;
-  @include breakpoint(xs) {
+  @include breakpoint(md) {
     font-size: $body-responsive-size;
-    line-height: $body-responsive-size + 10px;
+    line-height: $body-responsive-size;
   }
 }
 
@@ -15,75 +16,67 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: $font-family-heading;
+  font-family: $font-family;
   font-weight: 900;
   color: $black;
-  margin: 1.5em 0 0.75em;
+  line-height: 1.6;
+  letter-spacing: -3px;
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
 
 a.button,
 button {
-  font-family: $font-family-body;
   font-weight: 700;
 }
 
 a {
   text-decoration: none;
   font-weight: bold;
+  color: $black;
 }
 
 h1 {
   font-size: $heading-1-size;
-  line-height: $heading-1-size + 15px;
-  @include breakpoint(sm) {
+  line-height: $heading-1-size;
+  @include breakpoint(md) {
     font-size: $heading-1-responsive-size;
-    line-height: $heading-1-responsive-size + 10px;
+    line-height: $heading-1-responsive-size;
   }
 }
 
 h2 {
   font-size: $heading-2-size;
-  line-height: $heading-2-size + 10px;
-  @include breakpoint(sm) {
+  line-height: $heading-2-size;
+  @include breakpoint(md) {
     font-size: $heading-2-responsive-size;
-    line-height: $heading-2-responsive-size + 10px;
+    line-height: $heading-2-responsive-size;
   }
 }
 
-h3 {
-  font-size: $heading-3-size;
-  line-height: $heading-3-size + 10px;
-  margin: 15px 0;
-  @include breakpoint(sm) {
-    font-size: $heading-3-responsive-size;
-    line-height: $heading-3-responsive-size + 10px;
+.medium {
+  font-size: 20px;
+  line-height: 1;
+
+  @include breakpoint(md) {
+    font-size: 18px;
   }
 }
 
-h4 {
-  font-size: $heading-4-size;
-  line-height: $heading-4-size + 10px;
-  @include breakpoint(sm) {
-    font-size: $heading-4-responsive-size;
-    line-height: $heading-4-responsive-size + 10px;
+.small {
+  font-size: 18px;
+  line-height: 1;
+
+  @include breakpoint(md) {
+    font-size: 16px;
   }
 }
 
-.strong {
-  font-weight: bold;
-}
-
-.quote {
-  font-weight: 400;
-  font-style: italic;
-  font-size: $quote-size;
-  margin-left: -1.75px;
-  line-height: 1.48;
-  letter-spacing: -.014em;
-  text-indent: -.32em;
-  padding: 35px;
-  @include breakpoint(xs) {
-    font-size: $quote-responsive-size;
-    padding: 35px 0;
-  }
+.link {
+  border-bottom: 1px solid $black;
+  margin-bottom: 5px;
+  display: inline-block;
 }

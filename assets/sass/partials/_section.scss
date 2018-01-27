@@ -1,0 +1,124 @@
+.section {
+  height: 100vh;
+  background-color: $white;
+  padding: 60px 0;
+  overflow: hidden;
+
+  @include breakpoint(md) {
+    height: auto;
+  }
+}
+
+.section--full {
+  @extend .section;
+
+  @include breakpoint(md) {
+    height: 100vh;
+  }
+}
+
+.section--background {
+  background: url('../images/background.gif') no-repeat center center;
+  background-size: cover;
+
+  @include breakpoint(sm) {
+    background: url('../images/background-mobile.gif') no-repeat center bottom;
+    background-size: 70%;
+  }
+
+   @include breakpoint(xs) {
+    background: url('../images/background-mobile.gif') no-repeat center bottom;
+    background-size: 90%;
+  }
+}
+
+.section--black {
+  @extend .section;
+  background-color: $black;
+  
+  h2, p {
+    color: $white;
+  }
+}
+
+.section-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  h1, h2 {
+    margin-top: 0;
+    margin-right: 30px;
+
+    @include breakpoint(xs) {
+      margin-right: 0;
+    }
+  }
+
+  @include breakpoint(xs) {
+    flex-flow: column wrap;
+  }
+}
+
+.section-column {
+  flex-basis: 0;
+  flex-grow: 1;
+  padding: 0 15px;
+
+  @include breakpoint(sm) {
+    h2 {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.section-column--double {
+  @extend .section-column;
+  flex-grow: 2;
+  
+  p {
+    width: 60%;
+  }
+
+  @include breakpoint(md) {
+    padding: 10px 0;
+
+    p {
+      width: 100%;
+      margin: auto;
+    }
+  }
+}
+
+.section-column--paragraph {
+  @extend .section-column;
+
+  p {
+    width: 90%;
+    padding: 50px 0;
+    font-weight: normal;
+    line-height: 1.6;
+
+    @include breakpoint(xs) {
+      padding: 10px 0;
+      width: 100%;
+    }
+  }
+}
+
+.section-column--list {
+  @extend .section-column;
+
+  p {
+    width: 90%;
+    padding: 20px 0 0 0;
+    font-weight: normal;
+    line-height: 1.6;
+
+    @include breakpoint(xs) {
+      padding: 10px 0;
+      width: 100%;
+    }
+  }
+}

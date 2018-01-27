@@ -1,31 +1,114 @@
+--- 
+layout: default 
 ---
-layout: default
----
-{% include header.html %}
-<div class="container">
-  {% if site.posts.size  == 0 %}
-  <article class="article">
-    <h3>Ups! Posts coming soon...</h3>
-  </article>
-  {% endif %}
-  {% for post in site.posts %}
-  <article class="article">
-    <header class="article-header">
-      <p class="article-date">
-        {{ post.date | date: '%B %d, %Y' }}
-      </p>
-      <h2 class="article-title">
-        <a href="{{ post.url }}">{{ post.title }}</a>
-      </h2>
-    </header>
-    {% if post.picture %}
-      <div class="article-picture" style="background-image: linear-gradient(rgba(40,48,68,0.6), rgba(40,48,68,0.6)), url({{ post.picture }})"></div>
-    {% endif %}
-    <p class="article-excerpt">
-      {{ post.excerpt }}
-    </p>
-      <a class="article-read link" href="{{ post.url }}">Read more...</a>
-  </article>
-  {% endfor %}
-  {% include newsletter.html %}
-</div>
+
+<section class="section--full section--background">
+  <div class="container-fluid">
+    <div class="section-wrapper">
+      <div class="section-column">
+        <h1>Lorena.</h1>
+      </div>
+      <div class="separator-mobile"></div>
+      <div class="section-column">
+        <p>Estrategia y creatividad digital. Creo en los trabajos llenos de amor, tiempo y ganas.</p>
+      </div>
+      <div class="separator-mobile"></div>
+      <div class="section-column">
+        <p class="medium">contacto</p>
+        <p class="medium">
+          <a href="mailto:lorenacorona95@gmail.com">lorenacorona95@gmail.com</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container-fluid">
+    <div class="section-wrapper">
+      <div class="section-column">
+        <h2>quién </br>soy</h2>
+      </div>
+      <div class="section-column--paragraph">
+        <p class="small">
+          Publicista de carrera y marketiniana de profesión. Ah, y de las que cantan de camino al trabajo. Siempre he creído que los
+          días están llenos de buenas ideas. Por eso, como apasionada de la creatividad en todas sus formas, siento que la
+          publicidad se “queda corta” para cubrir el espacio que hay entre las personas y las cosas.
+        </p>
+      </div>
+      <div class="section-column--paragraph">
+        <p class="small">
+          Así que, con una especialización en hacer cosas que le dan una pereza terrible a la mayoría de humanos, intento llevar la
+          publicidad a un nuevo escenario digitalizado. Para crear contenido que construya relaciones. Para conectar mejor
+          a las marcas con las personas. Para crear experiencias reales. Vaya, que intento entender mejor el mundo en el
+          que nos movemos.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section--black">
+  <div class="container-fluid">
+    <div class="section-wrapper">
+      <div class="section-column">
+        <h2>a qué</br> me </br>dedico</h2>
+      </div>
+      <div class="section-column--list">
+        <p class="small">Redacción de contenidos. Es decir, crear, contar y poner en bonito las historias.</p>
+        <p class="small">Community management. O lo que viene a ser hacer que las redes se vuelvan más sociales.</p>
+        <p class="small">Adquisición online de usuarios. Definir estrategias SEM y SMM, siempre utilizando la tecnología para alimentar la
+          creatividad y el buen contenido.</p>
+      </div>
+      <div class="section-column--list">
+        <p class="small">Partners estratégicos y colaboraciones con bloggers e influencers. Con el objetivo de convertir a tu marca en una
+          love brand irresistible entre tu público objetivo.</p>
+        <p class="small">Prensa y comunicación (sí, comunicación en general). Para encontrar y dar a conocer la propuesta de valor diferencial
+          de tu marca y ayudar a que otros la descubran y decidan hacerla suya.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section--full section--background">
+  <div class="container-fluid">
+    <div class="section-wrapper">
+      <div class="section-column">
+        <h2>contacto</h2>
+      </div>
+      <div class="section-column">
+        <ul class="contact-list">
+          <li>
+            <h3>Lorena Corona</h3>
+            <div class="separator"></div>
+          </li>
+          <li>
+            <p class="medium">
+              <a href="tel: +34688921456">688 921 456</a>
+            </p>
+          </li>
+          <li>
+            <p class="medium">
+              <a href="mailto:lorenacorona95@gmail.com">lorenacorona95@gmail.com</a>
+            </p>
+            <div class="separator"></div>
+          </li>
+          <li>
+            <p class="medium">
+              <a href="https://www.linkedin.com/in/lorenacorona/" target="_blank" rel="noopener" class="link">linkedin</a>
+            </p>
+          </li>
+          <li>
+            <p class="medium">
+              <a href="https://twitter.com/LorenaCoronaM" target="_blank" rel="noopener" class="link">twitter</a>
+            </p>
+          </li>
+          <li>
+            <p class="medium">
+              <a href="https://www.instagram.com/lorenacorona/" target="_blank" rel="noopener" class="link">instagram</a>
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="section-column">
+      </div>
+    </div>
+  </div>
+</section>

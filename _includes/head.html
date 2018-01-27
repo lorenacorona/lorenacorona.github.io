@@ -1,19 +1,31 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-  <link rel="author" href="https://plus.google.com/u/0/+AlbertoGallegoCastro"/>
+  <meta itemprop="description" name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | escape }}">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" type="text/css">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-  {% feed_meta %}
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}"> {% feed_meta %}
 
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Playfair+Display:700,900" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-  <script src='https://api.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.js'></script>
-  <link href='https://api.mapbox.com/mapbox-gl-js/v0.35.1/mapbox-gl.css' rel='stylesheet' />
-  {% seo %}
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}"> {% if page.url == '/' %}
+  <meta property="og:image" content="{{ site.url }}/assets/images/fotografiaHome.png" /> {% else %}
+  <meta property="og:image" content="{{ site.url }}/assets/images{{ page.url }}/main.jpg" /> {% endif %}
+
+  <meta property="og:site_name" content="Lorena Corona. Publicista de carrera y marketiniana de profesión.">
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt }}{% else %}{{ site.description }}{% endif %}">
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:site" content="@LorenaCoronaM" />
+  <meta name="twitter:creator" content="@LorenaCoronaM">
+
+  <meta property="article:published_time" content="{{ page.date }}" />
 </head>
