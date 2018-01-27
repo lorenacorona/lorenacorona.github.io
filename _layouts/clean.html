@@ -1,4 +1,1 @@
-
-
-{% include head.html %}
-{{content}}
+ {% include head.html %} {{content}} {% if jekyll.environment == 'production' %} {% include analytics.html %} {% endif %}
