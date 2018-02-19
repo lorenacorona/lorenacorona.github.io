@@ -41,11 +41,11 @@ a {
 }
 
 h1 {
-  font-size: $heading-1-size;
-  line-height: $heading-1-size;
+  font-size: $body-size;
+  line-height: $body-size;
   @include breakpoint(md) {
-    font-size: $heading-1-responsive-size;
-    line-height: $heading-1-responsive-size;
+    font-size: $body-responsive-size;
+    line-height: $body-responsive-size;
   }
 }
 

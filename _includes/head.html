@@ -15,7 +15,7 @@
   <meta property="og:type" content="article">
   <meta property="og:title" content="{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}"> {% if page.url == '/' %}
-  <meta property="og:image" content="{{ site.url }}/assets/images/fotografiaHome.png" /> {% else %}
+  <meta property="og:image" content="{{ site.url }}/assets/images/main.png" /> {% else %}
   <meta property="og:image" content="{{ site.url }}/assets/images{{ page.url }}/main.jpg" /> {% endif %}
 
   <meta property="og:site_name" content="Lorena Corona. Publicista de carrera y marketiniana de profesión.">
@@ -28,4 +28,16 @@
   <meta name="twitter:creator" content="@LorenaCoronaM">
 
   <meta property="article:published_time" content="{{ page.date }}" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org/",
+      "@type": "Person",
+      "name": "Lorena Corona",
+      "description": "Estrategia y creatividad digital. Especialista en llevar la publicidad a un nuevo escenario digitalizado para conectar mejor a las marcas con las personas.",
+      "image": "/assets/images/main.png",
+      "email": "lorenacorona95@gmail.com",
+      "url": "https://lorenacorona.com/"
+    }
+  </script>
 </head>
