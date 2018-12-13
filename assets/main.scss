@@ -40,7 +40,7 @@
 
 .title {
   font-family: sofiapro-black;
-  font-size: 40;
+  font-size: 2em;
   margin-top: 35px;
   margin-bottom: 35px;
 
@@ -82,9 +82,11 @@ a:hover {
   font-family: sofiapro-black,Helvetica,Arial,sans-serif;
   display: block;
   font-size: 40px;
-  margin-top: 120px;
+  padding-top: 120px;
   margin-bottom: 120px;
   line-height: 1;
+  max-width: 800px;
+  text-align: left;
 }
 
 //articles
@@ -108,6 +110,63 @@ a:hover {
   font-size: 40px;
 }
 
+//newsletter
+.newsletter {
+    margin-top: 100px;
+    background-color: black;
+    padding-bottom: 50px;
+}
+
+.email-input {
+  font-family: sofiapro-light;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  padding-left: 20px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 0px;
+  border: none;
+  width: 210px;
+  height: 50px;
+  font-size: 15px;
+}
+
+.newsletter-title {
+  font-family: sofiapro-black;
+  font-size: 32px;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  color: white;
+  text-align: center;
+}
+
+.newsletter-body {
+  color: #fff;
+  font-family: sofiapro-light,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+
+.newsletter-button {
+  display: inline-block;
+  padding: 6px 3px;
+  text-align: center;
+  color: #000;
+  background-color: #fff;
+  border-radius: 0px;
+  border: none;
+  width: 120px;
+  height: 50px;
+  text-transform:uppercase;
+  font-size: 15px;
+  font-family: sofiapro-regular;
+}
 //footer
 footer {
   margin-top: 90px;
@@ -121,12 +180,13 @@ footer {
   text-transform: lowercase;
 }
 
-.contact-list {
-}
-
 .social {
   list-style-type: none;
   padding: 0;
   margin-bottom: 15px;
   text-align: right;
+}
+
+.wrapper {
+  max-width: 1000px;
 }
