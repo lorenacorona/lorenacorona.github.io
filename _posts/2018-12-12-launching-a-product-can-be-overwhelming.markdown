@@ -2,7 +2,6 @@
 layout: post
 title:  "Launching a product can be overwhelming"
 date:   2018-12-12 22:51:07 +0100
-categories:
 ---
 
 When it comes to a new business launch, my motto has always been go big or go home. I think the time and effort behind big projects is worth celebrating, don’t you? Not only are new launches a great opportunity to get your audience excited about your business, but they can also expand your reach. And even more importantly, big launches can result in big profits. The problem? There is a lot of things that can be done that sometimes I find it so overwhelming I can ever decide where to start. And I just get stuck.

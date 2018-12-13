@@ -2,7 +2,6 @@
 layout: post
 title:  "Life journal I: change"
 date:   2018-12-12 22:51:07 +0100
-categories:
 ---
 
 This year has been the first one that I've really found the time to stop and think about my goals. I know, after 23 years... It was about time. The problem is we're already at the end of November and... I'm not even close to reaching any of them.

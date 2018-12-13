@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<div>
+  {%- if page.title -%}
+    <h1 class="title">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li>
+        <!--<div class="post-categories">
+          {% if post %}
+            {% assign categories = post.categories %}
+          {% else %}
+            {% assign categories = page.categories %}
+          {% endif %}
+          {% for category in categories %}
+          {{site.baseurl}} {{category|slugize}}
+          {% unless forloop.last %}&nbsp;{% endunless %}
+          {% endfor %}
+        </div>-->
+
+
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+
+  {{ post.excerpt }}
+
+      </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+</div>
