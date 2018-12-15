@@ -4,37 +4,173 @@
 @import "minima";
 
 @font-face {
-	font-family: "sofiapro-regular","sofiapro-black", "sofiapro-light";
-	src: url("../assets/fonts/sofiapro-regular.ttf")
-  url("../assets/fonts/sofiapro-black.ttf")
-  url("../assets/fonts/sofiapro-light.ttf");
+    font-family: 'sofiapro-black';
+    src: url('../assets/fonts/sofia_pro_black-webfont.woff2') format('woff2'),
+         url('../assets/fonts/sofia_pro_black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sofiapro-light';
+    src: url('../assets/fonts/sofia_pro_light-webfont.woff2') format('woff2'),
+         url('../assets/fonts/sofia_pro_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sofiapro-regular';
+    src: url('../assets/fonts/sofia_pro_regular-webfont.woff2') format('woff2'),
+         url('../assets/fonts/sofia_pro_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$break-phonel: 480px;
+$break-tabletp: 600px;
+$break-tabletl: 1024px;
+$break-laptop: 1220px;
+$break-desktop: 1600px;
+
+@mixin mq($media) {
+  @if $media == phonel {
+    @media only screen and (min-width: $break-phonel) {
+      @content;
+    }
+  } @else if $media == tabletp {
+    @media only screen and (min-width: $break-tabletp) {
+      @content;
+    }
+  } @else if $media == tabletl {
+    @media only screen and (min-width: $break-tabletl) {
+      @content;
+    }
+  } @else if $media == laptop {
+    @media only screen and (min-width: $break-laptop) {
+      @content;
+    }
+  } @else if $media == desktop {
+    @media only screen and (min-width: $break-desktop) {
+      @content;
+    }
+  }
 }
 
 
 //header
 .header {
   min-height: 55.95px;
-  padding-top: 50px;
   margin-bottom:30px;
+
+	@include mq(tabletl) {
+		padding-top: 50px;
+	}
 }
+
 
 .site-title {
-  font-size: 20px;
-  line-height: $base-line-height * $base-font-size * 2.25;
-  letter-spacing: 0px;
-  margin-bottom: 0;
-  float: left;
+	width: 70%;
+
+	img {
+		width: 100%;
+		max-width: 150px;
+	}
+
+	@include mq(phonel) {
+		img {
+			max-width: 200px;
+		}
+	}
+
+	@include mq(tabletp) {
+		width: 50%;
+	}
 }
 
-.nav-primary {
-  font-family: sofiapro-light, Helvetica, Arial, sans-serif;
-  letter-spacing: 1px;
-  line-height: 1.3;
-  font-size: 16px;
-  text-transform: lowercase;
-  margin-right: 40px;
-  color: $text-color;
+.site-nav {
+	position: relative;
+	top: 0;
+	width: 30%;
+	border: 0;
+	text-align: right;
+
+	@include mq(tabletp) {
+		width: 50%;
+	}
 }
+
+.nav-content {
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row nowrap;
+	align-items: center;
+}
+
+.site-nav input:checked ~ .trigger {
+	display: flex;
+	flex-flow: column nowrap;
+	padding: 60px;
+	text-align: left;
+	box-sizing: border-box;
+
+	@include mq(tabletp) {
+		flex-flow: row nowrap;
+		text-align: right;
+		padding: 0;
+		margin: auto;
+	}
+
+
+}
+
+
+.trigger {
+	position: fixed;
+	background-color: black;
+	width: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+
+	&-header {
+		margin-bottom: 60px
+	}
+
+  @include mq(tabletp) {
+		background-color: transparent;
+		position: relative;
+		height: auto;
+
+		&-header {
+			margin-bottom: 0;
+		}
+	}
+
+
+
+	.nav-primary {
+			font-family: sofiapro-black, Helvetica, Arial, sans-serif;
+			color: white;
+			font-size: 40px;
+			margin-bottom: 10px;
+			text-transform: lowercase;
+
+			 @include mq(tabletp) {
+				font-family: sofiapro-light, Helvetica, Arial, sans-serif;
+				color: $text-color;
+				font-size: 16px;
+				margin-right: 40px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+		}
+	}
+}
+
+
 
 //content
 
@@ -80,13 +216,16 @@ a:hover {
 //home
 .home {
   font-family: sofiapro-black,Helvetica,Arial,sans-serif;
-  display: block;
-  font-size: 40px;
-  padding-top: 120px;
-  margin-bottom: 120px;
-  line-height: 1;
+  font-size: 30px;
+	line-height: 1;
+	padding: 60px 0;
   max-width: 800px;
   text-align: left;
+
+	@include mq(tabletp) {
+		font-size: 40px;
+		padding: 120px 0;
+	}
 }
 
 //articles
@@ -166,10 +305,19 @@ a:hover {
   text-transform:uppercase;
   font-size: 15px;
   font-family: sofiapro-regular;
+	cursor: pointer;
+
+	&:hover {
+		opacity: .8;
+	}
 }
 //footer
 footer {
-  margin-top: 90px;
+  margin-top: 0;
+
+	@include mq(tabletp) {
+		margin-top: 90px;
+	}
 }
 
 .p-spacing {
@@ -184,9 +332,46 @@ footer {
   list-style-type: none;
   padding: 0;
   margin-bottom: 15px;
-  text-align: right;
+	margin-left: 0;
+	display: flex;
+	flex-flow: column nowrap;
+
+	@include mq(tabletp) {
+		flex-flow: row nowrap;
+	}
+
+	li {
+		display: inline-block;
+		margin-right: 40px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
 }
 
 .wrapper {
   max-width: 1000px;
+}
+
+.footer-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.mobile-hidden {
+	display: none;
+
+	@include mq(tabletp) {
+		display: flex;
+	}
+}
+
+.desktop-hidden {
+	display: flex;
+
+	@include mq(tabletp) {
+		display: none;
+	}
 }
