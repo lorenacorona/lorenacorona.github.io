@@ -4,19 +4,12 @@ layout: default
 
 <div class="wrapper">
   <article itemscope itemtype="http://schema.org/BlogPosting">
-
     <header>
       <h1 class="title" itemprop="name headline">{{ page.title | escape }}</h1>
     </header>
-
     <div class="post-content e-content" itemprop="articleBody">
       {{ content }}
     </div>
-
-    {%- if site.disqus.shortname -%}
-      {%- include disqus_comments.html -%}
-    {%- endif -%}
   </article>
 </div>
-
 {%- include newsletter-form.html -%}
