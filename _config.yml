@@ -18,10 +18,14 @@ email: hello@lorenacorona.com
 description: >- # this means to ignore newlines until "baseurl:"
   I’m a marketeer trying to build a better world through entrepreneurship and creativity.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "localhost:4000" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://lorenacorona.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: lorenacoronam
 instagram_username:  lorenacorona
 linkedin_username: lorenacorona
+collections:
+  posts:
+    output: true
+    permalink: /articles/:title/
 
 # Build settings
 markdown: kramdown
