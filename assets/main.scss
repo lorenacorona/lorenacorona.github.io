@@ -273,6 +273,7 @@ a:hover {
   margin-top: 100px;
   background-color: black;
   padding-bottom: 50px;
+  padding-top: 30px;
 }
 
 .email-input {
@@ -308,7 +309,7 @@ a:hover {
   max-width: 350px;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 
   @include mq(tabletp) {
     max-width: 600px;
@@ -334,6 +335,67 @@ a:hover {
     opacity: 0.8;
   }
 }
+
+.mb-form {
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  align-items: center;
+}
+
+.newsletter-inputs {
+  display: flex;
+  background-color: black;
+  padding-bottom: 20px;
+}
+
+.email-input {
+  font-family: sofiapro-light;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  padding-left: 20px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 0px;
+  border: none;
+  width: 210px;
+  height: 50px;
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+input[name="mb_6636bb17d81642b19f45e42430ddb47d"] {
+  display: none;
+}
+
+.newsletter-button {
+  display: inline-block;
+  padding: 6px 3px;
+  text-align: center;
+  color: #000;
+  background-color: #fff;
+  border-radius: 0px;
+  border: none;
+  width: 120px;
+  height: 50px;
+  font-size: 15px;
+  font-family: sofiapro-regular;
+  cursor: pointer;
+  outline: 0;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.mb-message {
+  font-size: 13px;
+  color: white;
+}
+
 //footer
 footer {
   margin-top: 0;
@@ -403,5 +465,60 @@ footer {
 
   @include mq(tabletp) {
     display: none;
+  }
+}
+
+//thanks page
+
+//thanks page
+.thanks-page {
+  min-block-size: -webkit-fill-available;
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
+.thanks-title {
+  font-family: sofiapro-black;
+  font-size: 32px;
+  margin-top: 35px;
+  color: black;
+  text-align: center;
+}
+
+.thanks-body {
+  color: black;
+  font-family: sofiapro-light, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+  max-width: 350px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.button-regular {
+  display: inline-block;
+  padding: 6px 3px;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  border-radius: 0px;
+  border: none;
+  width: 140px;
+  height: 40px;
+  font-size: 15px;
+  font-family: sofiapro-regular;
+  cursor: pointer;
+  line-height: 38px;
+  margin-left: 0 auto;
+  text-decoration: none;
+  text-transform: lowercase;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:visited {
+    color: white;
   }
 }
